@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import { AgGridReact } from "ag-grid-react";
 import { classifyText } from "./lib/classify";
 import {
@@ -54,6 +54,7 @@ const DEFAULT_ROWS: RowData[] = [
 
 const App: React.FC = () => {
   const [rowData, setRowData] = useState<RowData[]>(DEFAULT_ROWS);
+  const gridRef = useRef<AgGridReact<RowData>>(null);
 
   const columnDefs: ColDef<RowData>[] = useMemo(
     () => [
@@ -127,6 +128,9 @@ const App: React.FC = () => {
   };
 
   const clearAll = () => {
+    if (gridRef.current && gridRef.current.api) {
+      gridRef.current.api.stopEditing();
+    }
     setRowData(DEFAULT_ROWS);
     toast.success("All rows cleared!");
   };
@@ -164,6 +168,7 @@ const App: React.FC = () => {
 
           <div className="w-full bg-white rounded-xl shadow-sm p-4 border border-gray-100">
             <AgGridReact
+              ref={gridRef}
               rowData={rowData}
               columnDefs={columnDefs}
               theme={Theme}
