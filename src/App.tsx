@@ -54,6 +54,7 @@ const DEFAULT_ROWS: RowData[] = [
 
 const App: React.FC = () => {
   const [rowData, setRowData] = useState<RowData[]>(DEFAULT_ROWS);
+  const [gridKey, setGridKey] = useState(0);
   const gridRef = useRef<AgGridReact<RowData>>(null);
 
   const columnDefs: ColDef<RowData>[] = useMemo(
@@ -128,10 +129,17 @@ const App: React.FC = () => {
   };
 
   const clearAll = () => {
-    if (gridRef.current && gridRef.current.api) {
-      gridRef.current.api.stopEditing();
-    }
-    setRowData(DEFAULT_ROWS);
+    gridRef?.current?.api.stopEditing();
+    const updatedRows = rowData.map((row) => ({
+      ...row,
+      message: "",
+      category: "",
+      confidence: null,
+      actionableText: "",
+    }));
+
+    setRowData(updatedRows);
+    setGridKey((k) => k + 1);
     toast.success("All rows cleared!");
   };
 
@@ -168,6 +176,7 @@ const App: React.FC = () => {
 
           <div className="w-full bg-white rounded-xl shadow-sm p-4 border border-gray-100">
             <AgGridReact
+              key={gridKey}
               ref={gridRef}
               rowData={rowData}
               columnDefs={columnDefs}
