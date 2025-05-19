@@ -10,6 +10,7 @@ import {
 } from "ag-grid-community";
 import { Plus, Trash2, Info } from "lucide-react";
 import { Toaster, toast } from "sonner";
+import CopyCell from "./CopyCell";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
@@ -64,6 +65,7 @@ const App: React.FC = () => {
         field: "message",
         editable: true,
         flex: 2,
+        cellRenderer: CopyCell,
       },
       {
         headerName: "Category",
@@ -174,13 +176,14 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full bg-white rounded-xl shadow-sm p-4 border border-gray-100">
+          <div className="w-full bg-white rounded-xl shadow-sm p-2 border border-gray-100">
             <AgGridReact
               key={gridKey}
               ref={gridRef}
               rowData={rowData}
               columnDefs={columnDefs}
               theme={Theme}
+              singleClickEdit={true}
               onCellValueChanged={handleCellValueChanged}
               domLayout="autoHeight"
             />
