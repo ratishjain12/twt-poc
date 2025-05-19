@@ -10,7 +10,6 @@ import {
 } from "ag-grid-community";
 import { Plus, Trash2, Info } from "lucide-react";
 import { Toaster, toast } from "sonner";
-import CopyCell from "./components/CopyCell";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
@@ -65,7 +64,6 @@ const App: React.FC = () => {
         field: "message",
         editable: true,
         flex: 2,
-        cellRenderer: CopyCell,
       },
       {
         headerName: "Category",
