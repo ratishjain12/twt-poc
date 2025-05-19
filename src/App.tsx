@@ -10,7 +10,7 @@ import {
 } from "ag-grid-community";
 import { Plus, Trash2, Info } from "lucide-react";
 import { Toaster, toast } from "sonner";
-import CopyCell from "./CopyCell";
+import CopyCell from "./components/CopyCell";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
