@@ -174,7 +174,7 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full bg-white rounded-xl shadow-sm p-2 border border-gray-100">
+          <div className="w-full rounded-xl shadow-sm border border-gray-100">
             <AgGridReact
               key={gridKey}
               ref={gridRef}
