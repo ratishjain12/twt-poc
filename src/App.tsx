@@ -121,7 +121,7 @@ const App: React.FC = () => {
       {
         headerName: "Action",
         field: "action",
-        minWidth: 120,
+        minWidth: 180,
         flex: 1,
       },
       {

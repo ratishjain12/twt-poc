@@ -1,9 +1,25 @@
 import OpenAI from "openai";
+import products from "../data/products.json";
 
 const openai = new OpenAI({
   apiKey: import.meta.env.VITE_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true,
 });
+
+function getProductSummaryFromJson() {
+  let summary = "Our products include:\n";
+  for (const [category, items] of Object.entries(products)) {
+    // Get up to 3 product names per category for brevity
+    const names = (items as Record<string, unknown>[])
+      .map((item) => item.name as string)
+      .filter(Boolean)
+      .slice(0, 3);
+    summary += `- ${category}: ${names.join(", ")}\n`;
+  }
+  summary +=
+    "\nAll products are made with no added sugar, no artificial sweeteners, no preservatives, and all natural ingredients.";
+  return summary;
+}
 
 // First Agent: Message Categorization
 async function categorizeMessage(message: string): Promise<string> {
@@ -175,13 +191,13 @@ async function generateResponse(
           role: "system",
           content: `
             You are a customer service response generator for The Whole Truth, a health and wellness brand.
-            
-            Our Business Context:
+            \nOur Business Context:
             - We sell protein bars, supplements, and health products
             - Our products are focused on clean, transparent nutrition
             - We have both B2C and B2B operations
             - We operate in India and have physical stores and online presence
-            
+            \nProduct Catalog:\n${getProductSummaryFromJson()}
+
             Use "Email" as the action type when:
             - Detailed product specifications are requested
             - Formal business communications are needed
@@ -190,19 +206,21 @@ async function generateResponse(
             - B2B or partnership discussions
             - Legal or compliance matters
             - Formal complaints that need tracking
-            
-            Use "DM/Comment" for:
+
+            \nUse "DM/Comment" for:
             - Quick responses
             - Public interactions
             - Social media engagement
             - Simple product questions
             - Off-topic messages
             
-            Use "CRM Ticket" for:
+            \nUse "CRM Ticket" for:
             - Issues requiring tracking
             - Follow-up needed
             - Team collaboration required
             - Complex customer issues
+
+            use product catalog to generate response related to product information
           `,
         },
         {

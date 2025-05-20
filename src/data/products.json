@@ -1,0 +1,215 @@
+{
+  "Protein Powders": [
+    {
+      "name": "Mango Milkshake 24g Protein Powder",
+      "size": "1 KG",
+      "price": "₹3,888",
+      "discount": "14%",
+      "features": [
+        "24g protein per scoop",
+        "No added sugar",
+        "No artificial sweeteners",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    },
+    {
+      "name": "Whey Protein Cold Coffee",
+      "size": "1 KG",
+      "price": "₹3,599",
+      "discount": "10%",
+      "features": [
+        "24g protein per scoop",
+        "No added sugar",
+        "No artificial sweeteners",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    },
+    {
+      "name": "Whey Protein Light Cocoa",
+      "size": "1 KG",
+      "price": "₹3,599",
+      "discount": "10%",
+      "features": [
+        "24g protein per scoop",
+        "No added sugar",
+        "No artificial sweeteners",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    }
+  ],
+  "Protein Bars": [
+    {
+      "name": "Double Cocoa 20g Protein Bar",
+      "pack": "Pack of 5",
+      "price": "₹750",
+      "features": [
+        "20g protein per bar",
+        "No added sugar",
+        "No artificial sweeteners",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    },
+    {
+      "name": "Peanut Cocoa 20g Protein Bar",
+      "pack": "Pack of 5",
+      "price": "₹750",
+      "features": [
+        "20g protein per bar",
+        "No added sugar",
+        "No artificial sweeteners",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    },
+    {
+      "name": "Coconut Cocoa 12g Protein Bar",
+      "pack": "Pack of 6",
+      "price": "₹600",
+      "features": [
+        "12g protein per bar",
+        "No added sugar",
+        "No artificial sweeteners",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    },
+    {
+      "name": "Cranberry 12g Protein Bar",
+      "pack": "Pack of 6",
+      "price": "₹600",
+      "features": [
+        "12g protein per bar",
+        "No added sugar",
+        "No artificial sweeteners",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    }
+  ],
+  "Energy Bars": [
+    {
+      "name": "Almond Choco Fudge",
+      "pack": "Pack of 6 x 40g",
+      "price": "₹406",
+      "features": [
+        "Dairy free",
+        "No added sugar",
+        "No artificial sweeteners",
+        "Vegan",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    },
+    {
+      "name": "Cranberry Cocoa Fudge Bar",
+      "pack": "Single 40g bar",
+      "price": "₹60",
+      "features": [
+        "Dairy free",
+        "No added sugar",
+        "No artificial sweeteners",
+        "Vegan",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    }
+  ],
+  "Nut Spreads": [
+    {
+      "name": "Crunchy Unsweetened Protein Peanut Butter",
+      "size": "925g",
+      "price": "₹625",
+      "features": [
+        "No added sugar",
+        "No artificial sweeteners",
+        "Vegan",
+        "Gluten free",
+        "No preservatives",
+        "100% natural"
+      ]
+    },
+    {
+      "name": "Dark Chocolate Crunchy Peanut Butter",
+      "size": "325g",
+      "price": "₹299",
+      "features": [
+        "No added sugar",
+        "No artificial sweeteners",
+        "Vegan",
+        "Gluten free",
+        "No preservatives",
+        "100% natural"
+      ]
+    },
+    {
+      "name": "Unsweetened Creamy Peanut Butter",
+      "size": "325g",
+      "price": "₹225",
+      "features": [
+        "No added sugar",
+        "No artificial sweeteners",
+        "Vegan",
+        "Gluten free",
+        "No preservatives",
+        "100% natural"
+      ]
+    }
+  ],
+  "Muesli": [
+    {
+      "name": "Nuts, Fruits and Seeds Muesli",
+      "size": "750g",
+      "price": "₹540",
+      "features": [
+        "88% nuts, seeds, whole grains, and dried fruits",
+        "Vegan",
+        "Dairy free",
+        "No artificial sweeteners",
+        "No preservatives",
+        "No gluten or soy",
+        "No added flavor or color",
+        "Sweetened with Kakvi"
+      ]
+    },
+    {
+      "name": "Choco Fruit Crunch Muesli",
+      "size": "350g",
+      "price": "₹325",
+      "features": [
+        "Made with real chocolate",
+        "No added flavor",
+        "No artificial color",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    }
+  ],
+  "Chocolates": [
+    {
+      "name": "55% Hazelnut Dark Chocolate",
+      "size": "80g",
+      "price": "₹335",
+      "features": [
+        "No added sugar",
+        "No artificial sweeteners",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    },
+    {
+      "name": "Badaaaam Chocolate",
+      "size": "Not specified",
+      "price": "Not specified",
+      "features": [
+        "No added sugar",
+        "No artificial sweeteners",
+        "No preservatives",
+        "All natural ingredients"
+      ]
+    }
+  ]
+}
