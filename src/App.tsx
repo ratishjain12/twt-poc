@@ -7,6 +7,7 @@ import {
   themeQuartz,
   type CellValueChangedEvent,
   type ColDef,
+  type ICellRendererParams,
 } from "ag-grid-community";
 import { Plus, Trash2, Info } from "lucide-react";
 import { Toaster, toast } from "sonner";
@@ -17,7 +18,9 @@ interface RowData {
   message: string;
   category: string;
   confidence: number | null;
-  actionableText: string;
+  response: string;
+  action: string;
+  automationStatus?: string;
 }
 
 const Theme = themeQuartz.withParams({
@@ -30,25 +33,29 @@ const DEFAULT_ROWS: RowData[] = [
     message: "",
     category: "",
     confidence: null,
-    actionableText: "",
+    response: "",
+    action: "",
   },
   {
     message: "",
     category: "",
     confidence: null,
-    actionableText: "",
+    response: "",
+    action: "",
   },
   {
     message: "",
     category: "",
     confidence: null,
-    actionableText: "",
+    response: "",
+    action: "",
   },
   {
     message: "",
     category: "",
     confidence: null,
-    actionableText: "",
+    response: "",
+    action: "",
   },
 ];
 
@@ -63,22 +70,77 @@ const App: React.FC = () => {
         headerName: "Message",
         field: "message",
         editable: true,
-        flex: 2,
+        pinned: "left",
+        flex: 1,
+        autoHeight: true,
+        cellRenderer: (params: ICellRendererParams<RowData>) => {
+          return (
+            <div
+              style={{
+                whiteSpace: "normal",
+                lineHeight: "1.5",
+                padding: "4px",
+              }}
+            >
+              {params.value}
+            </div>
+          );
+        },
+        cellEditorParams: {
+          style: {
+            padding: "0",
+            width: "100%",
+            height: "100%",
+          },
+        },
       },
       {
         headerName: "Category",
         field: "category",
-        flex: 1,
       },
       {
         headerName: "Confidence",
         field: "confidence",
+        valueFormatter: (params) => {
+          if (params.value === null) return "";
+          return `${params.value}%`;
+        },
+      },
+      {
+        headerName: "Response",
+        field: "response",
+        minWidth: 300,
+        flex: 1,
+        autoHeight: true,
+        cellStyle: {
+          "white-space": "normal",
+          "line-height": "1.5",
+          padding: "8px",
+        },
+      },
+      {
+        headerName: "Action",
+        field: "action",
+        minWidth: 120,
         flex: 1,
       },
       {
-        headerName: "Actionable",
-        field: "actionableText",
-        flex: 3,
+        headerName: "Status",
+        field: "automationStatus",
+        minWidth: 150,
+        cellRenderer: (params: ICellRendererParams<RowData>) => {
+          if (
+            params.data &&
+            typeof params.data.confidence === "number" &&
+            params.data.confidence < 75
+          ) {
+            return <span style={{ color: "red" }}>⚠️ Needs Review</span>;
+          }
+          if (params.data && typeof params.data.confidence === "number") {
+            return <span style={{ color: "green" }}>✓ Automated</span>;
+          }
+          return "";
+        },
       },
     ],
     []
@@ -96,16 +158,15 @@ const App: React.FC = () => {
           ...event.data,
           category: "",
           confidence: 0,
-          actionableText: "",
+          response: "",
+          action: "",
         };
       } else {
-        console.log("classifying", message);
+        console.log("Processing message:", message);
         const result = await classifyText(message);
         updatedRow = {
           ...event.data,
-          category: result.category,
-          confidence: result.confidence,
-          actionableText: result.actionableText,
+          ...result,
         };
       }
 
@@ -122,7 +183,8 @@ const App: React.FC = () => {
         message: "",
         category: "",
         confidence: null,
-        actionableText: "",
+        response: "",
+        action: "",
       },
     ]);
     toast.success("Row added!");
@@ -135,7 +197,8 @@ const App: React.FC = () => {
       message: "",
       category: "",
       confidence: null,
-      actionableText: "",
+      response: "",
+      action: "",
     }));
 
     setRowData(updatedRows);
@@ -174,7 +237,7 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full rounded-xl shadow-sm border border-gray-100">
+          <div className="w-full rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <AgGridReact
               key={gridKey}
               ref={gridRef}
@@ -184,6 +247,14 @@ const App: React.FC = () => {
               singleClickEdit={true}
               onCellValueChanged={handleCellValueChanged}
               domLayout="autoHeight"
+              enableCellTextSelection={true}
+              suppressHorizontalScroll={false}
+              defaultColDef={{
+                resizable: true,
+                sortable: true,
+                filter: true,
+                wrapText: true,
+              }}
             />
           </div>
 
@@ -205,7 +276,25 @@ const App: React.FC = () => {
                 , and more.
               </li>
               <li>
-                It also suggests a brief, actionable response for each message.
+                It also suggests a brief, actionable response for each message
+                and determines the best action type (Email, DM/Comment, or CRM
+                Ticket).
+              </li>
+              <li>
+                <span className="font-medium text-gray-800">Review Status</span>{" "}
+                column shows how the message will be handled:
+                <ul className="list-disc pl-6 mt-1">
+                  <li>
+                    <span className="text-green-700">✓ Automated</span>: The
+                    system is confident and can handle the message
+                    automatically.
+                  </li>
+                  <li>
+                    <span className="text-red-700">⚠️ Needs Review</span>: The
+                    message is ambiguous or complex and will be flagged for
+                    human review.
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
