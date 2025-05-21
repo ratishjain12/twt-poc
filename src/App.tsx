@@ -163,11 +163,16 @@ const App: React.FC = () => {
         };
       } else {
         console.log("Processing message:", message);
-        const result = await classifyText(message);
-        updatedRow = {
-          ...event.data,
-          ...result,
-        };
+        const toastId = toast.loading("Processing your message...");
+        try {
+          const result = await classifyText(message);
+          updatedRow = {
+            ...event.data,
+            ...result,
+          };
+        } finally {
+          toast.dismiss(toastId);
+        }
       }
 
       setRowData((prev) =>
