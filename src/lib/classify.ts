@@ -33,6 +33,9 @@ async function categorizeMessage(message: string): Promise<string> {
           content: `
             You are a message classifier. Categorize the user's message into exactly one of the following categories:
 
+            product context:
+            ${getProductSummaryFromJson()}
+
             - **Love**: Expressions of affection, praise, or emotional connection to the brand or product indicated.  
             - **Grievance**: Complaints, frustrations, or dissatisfaction indicated.  
             - **Order Information**: Questions about shipping, tracking, invoices, or payment indicated.  
