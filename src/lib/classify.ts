@@ -39,6 +39,7 @@ async function categorizeMessage(message: string): Promise<string> {
             - **Product Information**: Questions about product features, durability, availability, etc indicated.  
             - **Business Queries**: Partnership or B2B discussions indicated.    
             - **Hiring**: Questions about open roles or applying for jobs indicated.
+            - **Fact**: General knowledge, factual, or trivia questions not related to the business or products.  
             - **Others**: Any other text that does not fit into the above categories.
           `,
         },
@@ -63,6 +64,7 @@ async function categorizeMessage(message: string): Promise<string> {
                   "Product Information",
                   "Business Queries",
                   "Hiring",
+                  "Fact",
                   "Others",
                 ],
               },
@@ -271,16 +273,25 @@ export async function classifyText(message: string): Promise<{
   action: string;
 }> {
   console.log("Classifying message:", message);
+
   const category = await categorizeMessage(message);
 
-  const confidence = await scoreConfidence(message, category);
+  if (category === "Fact") {
+    return {
+      category: "Others",
+      confidence: 100,
+      response:
+        "I'm here to help with questions about our products or services. Please let me know how I can assist you regarding The Whole Truth.",
+      action: "DM/Comment",
+    };
+  }
 
+  const confidence = await scoreConfidence(message, category);
   const { response, action } = await generateResponse(
     message,
     category,
     confidence
   );
-
   return {
     category,
     confidence,
