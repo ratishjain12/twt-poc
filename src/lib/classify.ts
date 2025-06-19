@@ -212,7 +212,7 @@ async function generateResponse(
             - Our products are powered by proprietary SmartGRID® technology
             - We operate in India through online and physical retail
             - We cater to both home and office customers
-            
+
             \nProduct Catalog:\n${getProductSummaryFromJson()}
 
             Use "Email" as the action type when:
@@ -296,7 +296,7 @@ export async function classifyText(message: string): Promise<{
       category: "Others",
       confidence: 100,
       response:
-        "I'm here to help with questions about our products or services. Please let me know how I can assist you regarding The Whole Truth.",
+        "I'm here to help with questions about our products or services. Please let me know how I can assist you regarding The Sleep Company.",
       action: "DM/Comment",
     };
   }
