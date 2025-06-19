@@ -1,214 +1,301 @@
 {
-  "Protein Powders": [
+  "Mattresses": [
     {
-      "name": "Mango Milkshake 24g Protein Powder",
-      "size": "1 KG",
-      "price": "₹3,888",
-      "discount": "14%",
+      "name": "Smart Ortho Mattress",
+      "sizes": ["Single", "Double", "Queen", "King"],
+      "price": "₹12,790",
+      "discount": "25%",
       "features": [
-        "24g protein per scoop",
-        "No added sugar",
-        "No artificial sweeteners",
-        "No preservatives",
-        "All natural ingredients"
+        "SmartGRID® technology",
+        "Orthopedic back support",
+        "10‑year warranty",
+        "100‑night trial",
+        "Free shipping"
       ]
     },
     {
-      "name": "Whey Protein Cold Coffee",
-      "size": "1 KG",
-      "price": "₹3,599",
-      "discount": "10%",
+      "name": "Smart Ortho Pro Mattress",
+      "sizes": ["Single", "Double", "Queen", "King"],
+      "price": "₹16,390",
+      "discount": "39%",
       "features": [
-        "24g protein per scoop",
-        "No added sugar",
-        "No artificial sweeteners",
-        "No preservatives",
-        "All natural ingredients"
+        "Enhanced SmartGRID® design",
+        "Orthopedic support",
+        "10‑year warranty",
+        "100‑night trial",
+        "Free shipping"
       ]
     },
     {
-      "name": "Whey Protein Light Cocoa",
-      "size": "1 KG",
-      "price": "₹3,599",
-      "discount": "10%",
+      "name": "Smart Luxe Mattress",
+      "sizes": ["Single", "Double", "Queen", "King"],
+      "price": "₹16,390",
+      "discount": "40%",
       "features": [
-        "24g protein per scoop",
-        "No added sugar",
-        "No artificial sweeteners",
-        "No preservatives",
-        "All natural ingredients"
+        "Luxury-grade SmartGRID®",
+        "Hybrid comfort layers",
+        "10‑year warranty",
+        "100‑night trial",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Smart Luxe Royale Latex + SmartGRID Mattress",
+      "sizes": ["Single", "Double", "Queen", "King"],
+      "price": "₹27,320",
+      "discount": "40%",
+      "features": [
+        "Latex + SmartGRID® combination",
+        "Premium luxury comfort",
+        "10‑year warranty",
+        "100‑night trial",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Smart Ortho SnowTec Cooling Mattress",
+      "sizes": ["Single", "Double", "Queen", "King"],
+      "price": "—",
+      "discount": "—",
+      "features": [
+        "Cooling SnowTec layer",
+        "Orthopedic SmartGRID® support",
+        "10‑year warranty",
+        "100‑night trial",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Smart Ortho Pro SnowTec New",
+      "sizes": ["Single", "Double", "Queen", "King"],
+      "price": "—",
+      "discount": "—",
+      "features": [
+        "SnowTec cooling + upgraded SmartGRID®",
+        "Orthopedic comfort",
+        "10‑year warranty",
+        "100‑night trial",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Grand Elite Mattress",
+      "sizes": ["Single", "Double", "Queen", "King"],
+      "price": "—",
+      "discount": "—",
+      "features": [
+        "Ultra‑luxury grade",
+        "SmartGRID® comfort",
+        "10‑year warranty",
+        "100‑night trial",
+        "Free shipping"
       ]
     }
   ],
-  "Protein Bars": [
+  "Pillows & Cushions": [
     {
-      "name": "Double Cocoa 20g Protein Bar",
-      "pack": "Pack of 5",
-      "price": "₹750",
+      "name": "Smart Adjustable Plush Pillow",
+      "price": "₹999",
+      "discount": "67%",
       "features": [
-        "20g protein per bar",
-        "No added sugar",
-        "No artificial sweeteners",
-        "No preservatives",
-        "All natural ingredients"
+        "SmartGRID® adjustable loft",
+        "Breathable grid structure",
+        "100‑night trial",
+        "Free shipping"
       ]
     },
     {
-      "name": "Peanut Cocoa 20g Protein Bar",
-      "pack": "Pack of 5",
-      "price": "₹750",
+      "name": "Smart Hybrid Pillow",
+      "price": "₹1,999",
+      "discount": "43%",
       "features": [
-        "20g protein per bar",
-        "No added sugar",
-        "No artificial sweeteners",
-        "No preservatives",
-        "All natural ingredients"
+        "SmartGRID® + plush foam hybrid",
+        "Cooling design",
+        "100‑night trial",
+        "Free shipping"
       ]
     },
     {
-      "name": "Coconut Cocoa 12g Protein Bar",
-      "pack": "Pack of 6",
-      "price": "₹600",
+      "name": "Smart Cervical Pillow",
+      "price": "₹1,999",
+      "discount": "52%",
       "features": [
-        "12g protein per bar",
-        "No added sugar",
-        "No artificial sweeteners",
-        "No preservatives",
-        "All natural ingredients"
+        "Ergonomic cervical support",
+        "SmartGRID® structure",
+        "100‑night trial",
+        "Free shipping"
       ]
     },
     {
-      "name": "Cranberry 12g Protein Bar",
-      "pack": "Pack of 6",
-      "price": "₹600",
+      "name": "SnowTec Adjustable Plush Pillow",
+      "price": "—",
+      "discount": "—",
       "features": [
-        "12g protein per bar",
-        "No added sugar",
-        "No artificial sweeteners",
-        "No preservatives",
-        "All natural ingredients"
+        "Cooling SnowTec layer",
+        "Adjustable loft",
+        "100‑night trial",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Revlax Reversible Pillow",
+      "price": "—",
+      "discount": "—",
+      "features": [
+        "Reversible design",
+        "SmartGRID® support",
+        "100‑night trial",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Smart Pregnancy Pillow",
+      "price": "—",
+      "discount": "—",
+      "features": [
+        "Maternity support",
+        "SmartGRID® comfort",
+        "100‑night trial",
+        "Free shipping"
       ]
     }
   ],
-  "Energy Bars": [
+  "Chairs & Desks": [
     {
-      "name": "Almond Choco Fudge",
-      "pack": "Pack of 6 x 40g",
-      "price": "₹406",
+      "name": "Onyx Orthopedic Office Chair",
+      "price": "₹10,999",
+      "discount": "58%",
       "features": [
-        "Dairy free",
-        "No added sugar",
-        "No artificial sweeteners",
-        "Vegan",
-        "No preservatives",
-        "All natural ingredients"
+        "SmartGRID® back support",
+        "Ergonomic design",
+        "Top rated",
+        "Free shipping"
       ]
     },
     {
-      "name": "Cranberry Cocoa Fudge Bar",
-      "pack": "Single 40g bar",
-      "price": "₹60",
+      "name": "Stylux Ergonomic Office Chair",
+      "price": "₹15,999",
+      "discount": "56%",
       "features": [
-        "Dairy free",
-        "No added sugar",
-        "No artificial sweeteners",
-        "Vegan",
-        "No preservatives",
-        "All natural ingredients"
+        "Stylish ergonomic build",
+        "SmartGRID® seat",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Ultron Premium Ergonomic Office Chair",
+      "price": "₹34,999",
+      "discount": "54%",
+      "features": ["Premium materials", "SmartGRID® support", "Free shipping"]
+    },
+    {
+      "name": "Aura Executive Chair",
+      "price": "₹17,999",
+      "discount": "—",
+      "features": [
+        "Executive build",
+        "SmartGRID® back support",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Adjustable Desk",
+      "price": "₹17,999",
+      "discount": "57%",
+      "features": ["Height adjustable", "Sturdy design", "Free shipping"]
+    }
+  ],
+  "Recliner Sofas & Beds": [
+    {
+      "name": "Luxe Motorised Recliner Sofa (1‑seater)",
+      "price": "₹30,999",
+      "discount": "49%",
+      "features": ["Motorised recliner", "SmartGRID® cushions", "Free shipping"]
+    },
+    {
+      "name": "Luxe Motorised Recliner Sofa (2‑seater)",
+      "price": "₹67,999",
+      "discount": "51%",
+      "features": ["Dual‑seat recliner", "SmartGRID® cushions", "Free shipping"]
+    },
+    {
+      "name": "Luxe Pro Massager Recliner Sofa",
+      "price": "₹63,990",
+      "discount": "47%",
+      "features": [
+        "In‑built massage",
+        "Motorised recline",
+        "SmartGRID® comfort",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Elev8 Smart Recliner Bed",
+      "price": "₹39,999",
+      "discount": "40%",
+      "features": [
+        "Adjustable bed",
+        "SmartGRID® mattress",
+        "Multiple modes",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Elev8 Smart Recliner Bed with Italia Frame",
+      "price": "₹57,999",
+      "discount": "38%",
+      "features": [
+        "Italian frame",
+        "Adjustable positions",
+        "SmartGRID® mattress",
+        "Free shipping"
+      ]
+    },
+    {
+      "name": "Elev8 Smart Recliner Bed with Leather Frame",
+      "price": "₹58,999",
+      "discount": "40%",
+      "features": [
+        "Leather frame",
+        "Adjustable modes",
+        "SmartGRID® mattress",
+        "Free shipping"
       ]
     }
   ],
-  "Nut Spreads": [
+  "Bedding & Accessories": [
     {
-      "name": "Crunchy Unsweetened Protein Peanut Butter",
-      "size": "925g",
-      "price": "₹625",
-      "features": [
-        "No added sugar",
-        "No artificial sweeteners",
-        "Vegan",
-        "Gluten free",
-        "No preservatives",
-        "100% natural"
-      ]
+      "name": "All‑Weather Comforter",
+      "price": "₹1,499",
+      "discount": "40%",
+      "features": ["All‑season warmth", "Hypoallergenic", "Free shipping"]
     },
     {
-      "name": "Dark Chocolate Crunchy Peanut Butter",
-      "size": "325g",
-      "price": "₹299",
-      "features": [
-        "No added sugar",
-        "No artificial sweeteners",
-        "Vegan",
-        "Gluten free",
-        "No preservatives",
-        "100% natural"
-      ]
+      "name": "Bamboo Fitted Sheets",
+      "price": "₹2,699",
+      "discount": "30%",
+      "features": ["Bamboo fabric", "Breathable", "Free shipping"]
     },
     {
-      "name": "Unsweetened Creamy Peanut Butter",
-      "size": "325g",
-      "price": "₹225",
-      "features": [
-        "No added sugar",
-        "No artificial sweeteners",
-        "Vegan",
-        "Gluten free",
-        "No preservatives",
-        "100% natural"
-      ]
+      "name": "Bamboo Mattress Protector",
+      "price": "₹2,399",
+      "discount": "29%",
+      "features": ["Water‑resistant", "Bamboo fabric", "Free shipping"]
     }
   ],
-  "Muesli": [
+  "Bundles": [
     {
-      "name": "Nuts, Fruits and Seeds Muesli",
-      "size": "750g",
-      "price": "₹540",
+      "name": "Festive Gifting Bundle",
+      "includes": [
+        "Pack of 2 Smart Adjustable Pillows",
+        "Bamboo Fitted Sheets",
+        "Smart Neck Massager Pillow"
+      ],
+      "price": "—",
       "features": [
-        "88% nuts, seeds, whole grains, and dried fruits",
-        "Vegan",
-        "Dairy free",
-        "No artificial sweeteners",
-        "No preservatives",
-        "No gluten or soy",
-        "No added flavor or color",
-        "Sweetened with Kakvi"
-      ]
-    },
-    {
-      "name": "Choco Fruit Crunch Muesli",
-      "size": "350g",
-      "price": "₹325",
-      "features": [
-        "Made with real chocolate",
-        "No added flavor",
-        "No artificial color",
-        "No preservatives",
-        "All natural ingredients"
-      ]
-    }
-  ],
-  "Chocolates": [
-    {
-      "name": "55% Hazelnut Dark Chocolate",
-      "size": "80g",
-      "price": "₹335",
-      "features": [
-        "No added sugar",
-        "No artificial sweeteners",
-        "No preservatives",
-        "All natural ingredients"
-      ]
-    },
-    {
-      "name": "Badaaaam Chocolate",
-      "size": "Not specified",
-      "price": "Not specified",
-      "features": [
-        "No added sugar",
-        "No artificial sweeteners",
-        "No preservatives",
-        "All natural ingredients"
+        "Curated bundle",
+        "Same warranties as singles",
+        "Free shipping"
       ]
     }
   ]

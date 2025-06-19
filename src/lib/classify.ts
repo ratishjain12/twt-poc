@@ -7,17 +7,28 @@ const openai = new OpenAI({
 });
 
 function getProductSummaryFromJson() {
-  let summary = "Our products include:\n";
+  let summary = "Product Catalog Summary (for LLM):\n";
   for (const [category, items] of Object.entries(products)) {
-    // Get up to 3 product names per category for brevity
-    const names = (items as Record<string, unknown>[])
-      .map((item) => item.name as string)
-      .filter(Boolean)
-      .slice(0, 3);
-    summary += `- ${category}: ${names.join(", ")}\n`;
+    const productList = (items as Record<string, unknown>[])
+      .slice(0, 3)
+      .map((item) => {
+        const name = (item.name as string) || "";
+        const price = item.price as string | undefined;
+        const discount = item.discount as string | undefined;
+        const features = item.features as string[] | undefined;
+        let details = `  - ${name}`;
+        if (price && price !== "—") details += ` (Price: ${price})`;
+        if (discount && discount !== "—") details += ` [${discount} off]`;
+        if (features && Array.isArray(features)) {
+          details += `\n      Features: ${features.slice(0, 3).join(", ")}`;
+        }
+        return details;
+      })
+      .join("\n");
+    summary += `\n${category}:\n${productList}\n`;
   }
   summary +=
-    "\nAll products are made with no added sugar, no artificial sweeteners, no preservatives, and all natural ingredients.";
+    "\nAll products come with free shipping and most have trial periods and warranties. For more details, ask about a specific product or category.";
   return summary;
 }
 
@@ -195,12 +206,13 @@ async function generateResponse(
         {
           role: "system",
           content: `
-            You are a customer service response generator for The Whole Truth, a health and wellness brand.
+            You are a customer service response generator for The Sleep Company, a premium comfort brand.
             \nOur Business Context:
-            - We sell protein bars, supplements, and health products
-            - Our products are focused on clean, transparent nutrition
-            - We have both B2C and B2B operations
-            - We operate in India and have physical stores and online presence
+            - We sell mattresses, pillows, ergonomic chairs, recliner beds, and other comfort solutions
+            - Our products are powered by proprietary SmartGRID® technology
+            - We operate in India through online and physical retail
+            - We cater to both home and office customers
+            
             \nProduct Catalog:\n${getProductSummaryFromJson()}
 
             Use "Email" as the action type when:

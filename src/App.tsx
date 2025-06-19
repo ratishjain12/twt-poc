@@ -219,22 +219,22 @@ const App: React.FC = () => {
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4 text-left">
               <img
-                src="/logo.svg"
-                alt="The Whole Truth Logo"
+                src="/logo.png"
+                alt="The Sleep Company Logo"
                 className="h-12 w-auto mr-2"
               />
             </div>
             <div className="flex gap-3">
               <button
                 onClick={addRow}
-                className="flex items-center gap-2 px-4 py-2 bg-black text-white border border-black rounded-md shadow-sm hover:bg-gray-900 transition cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 bg-sleep-primary text-white rounded-md shadow-sm hover:bg-sleep-accent transition cursor-pointer"
                 aria-label="Add Row"
               >
                 <Plus className="w-4 h-4" aria-hidden="true" /> Add Row
               </button>
               <button
                 onClick={clearAll}
-                className="flex items-center gap-2 px-4 py-2 bg-white text-black border border-black rounded-md shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black transition cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 bg-white text-black border border-black rounded-md shadow-sm hover:bg-sleep-gray hover:text-sleep-black focus:outline-none focus:ring-2 focus:ring-sleep-primary transition cursor-pointer"
                 aria-label="Clear All"
               >
                 <Trash2 className="w-4 h-4" aria-hidden="true" /> Clear All
@@ -305,7 +305,7 @@ const App: React.FC = () => {
           </div>
         </div>
         <footer className="w-full border-t border-gray-200 mt-8 py-4 text-center text-sm text-gray-500 bg-white/70 backdrop-blur-sm">
-          Demo for The Whole Truth. © 2025
+          Demo for The Sleep Company. © 2025
         </footer>
       </div>
     </>

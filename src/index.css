@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-sleep-primary: #07277f;
+  --color-sleep-accent: #46b6fb;
+  --color-sleep-gray: #c3c4d0;
+  --color-sleep-white: #ffffff;
+  --color-sleep-black: #000000;
+}
