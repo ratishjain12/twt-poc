@@ -216,7 +216,7 @@ const App: React.FC = () => {
       <Toaster position="top-center" richColors duration={1100} />
       <div className="min-h-screen  flex flex-col items-center  py-8 px-2">
         <div className="w-full max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-8">
             <div className="flex items-center gap-4 text-left">
               <img
                 src="/logo.png"
